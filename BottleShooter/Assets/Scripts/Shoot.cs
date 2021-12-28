@@ -6,7 +6,10 @@ public class Shoot : MonoBehaviour
 {
 	public BulletTrail trailObject;
 	public GameObject gunBarrelExit;
+
 	AudioSource soundFile;
+	float rayDistance = 1000f;
+
 
 	private void Start() {
 		soundFile = GetComponent<AudioSource>();
@@ -19,7 +22,12 @@ public class Shoot : MonoBehaviour
 			soundFile.Play();
 
 			RaycastHit hit;
-			Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 10000);
+			Ray ray = new Ray {
+				origin = transform.position,
+				direction = transform.TransformDirection(Vector3.forward),
+				
+			};
+			Physics.Raycast(ray, out hit, rayDistance);
 			if (hit.transform != null) {
 				IBreakable breakable = hit.transform.GetComponent<IBreakable>();
 				if (breakable != null) {
@@ -30,7 +38,7 @@ public class Shoot : MonoBehaviour
 			}
 			else {
 				GameObject trail = (GameObject)Instantiate(trailObject.gameObject, transform.position, transform.rotation);
-				trail.GetComponent<BulletTrail>().SetTrail(gunBarrelExit.transform.position, transform.TransformDirection(Vector3.forward) * 100f);
+				trail.GetComponent<BulletTrail>().SetTrail(gunBarrelExit.transform.position, ray.GetPoint(rayDistance));
 			}
 		}
 	}
