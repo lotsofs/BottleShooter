@@ -5,17 +5,18 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
 	public BulletTrail trailObject;
-	AudioSource audio;
+	public GameObject gunBarrelExit;
+	AudioSource soundFile;
 
 	private void Start() {
-		audio = GetComponent<AudioSource>();
+		soundFile = GetComponent<AudioSource>();
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Mouse0)) {
-			audio.Play();
+			soundFile.Play();
 
 			RaycastHit hit;
 			Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 10000);
@@ -25,11 +26,11 @@ public class Shoot : MonoBehaviour
 					breakable.Break();
 				}
 				GameObject trail = (GameObject)Instantiate(trailObject.gameObject, transform.position, transform.rotation);
-				trail.GetComponent<BulletTrail>().SetTrail(this.transform.position - (new Vector3(0f, 0.1f, 0f)), hit.point);
+				trail.GetComponent<BulletTrail>().SetTrail(gunBarrelExit.transform.position, hit.point);
 			}
 			else {
 				GameObject trail = (GameObject)Instantiate(trailObject.gameObject, transform.position, transform.rotation);
-				trail.GetComponent<BulletTrail>().SetTrail(this.transform.position - (new Vector3(0f, 0.1f, 0f)), transform.TransformDirection(Vector3.forward) * 100f);
+				trail.GetComponent<BulletTrail>().SetTrail(gunBarrelExit.transform.position, transform.TransformDirection(Vector3.forward) * 100f);
 			}
 		}
 	}
