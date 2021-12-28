@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &679824445601843181
+--- !u!1 &2488222802453947319
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,59 +8,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 154503475521772887}
-  - component: {fileID: -1186666906358904299}
-  - component: {fileID: -8566694074058611031}
+  - component: {fileID: 3011819463423768845}
   m_Layer: 0
-  m_Name: Bottle_OBJ (1)
+  m_Name: Plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &154503475521772887
+--- !u!4 &3011819463423768845
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679824445601843181}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.442, y: -0, z: 1.242}
+  m_GameObject: {fileID: 2488222802453947319}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5324397916653071971}
+  - {fileID: 6805911528850363810}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &-1186666906358904299
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679824445601843181}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8798113634122582, guid: 79e5bc058da90d94295ed404727dbd63, type: 3}
---- !u!114 &-8566694074058611031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679824445601843181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a09013e858be3a94093b999e2f8afc67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &3392899359754107028
+--- !u!1 &6278015352661588400
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,46 +40,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5324397916653071971}
-  - component: {fileID: 4350622090781886202}
-  - component: {fileID: 639093487825832983}
+  - component: {fileID: 6805911528850363810}
+  - component: {fileID: 3781382598097259184}
+  - component: {fileID: 3436662123174693151}
   m_Layer: 0
-  m_Name: pCylinder9_Bottle_OBJ
+  m_Name: Plank_OBJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5324397916653071971
+--- !u!4 &6805911528850363810
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3392899359754107028}
+  m_GameObject: {fileID: 6278015352661588400}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 154503475521772887}
+  m_Father: {fileID: 3011819463423768845}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4350622090781886202
+--- !u!33 &3781382598097259184
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3392899359754107028}
-  m_Mesh: {fileID: 8798113634122582, guid: 79e5bc058da90d94295ed404727dbd63, type: 3}
---- !u!23 &639093487825832983
+  m_GameObject: {fileID: 6278015352661588400}
+  m_Mesh: {fileID: -5009752851004254871, guid: 8e5606bb560a7e041b5992e866f7b6ba, type: 3}
+--- !u!23 &3436662123174693151
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3392899359754107028}
+  m_GameObject: {fileID: 6278015352661588400}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -121,7 +93,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 780def97be8d69c4b9712a401fa4e801, type: 2}
+  - {fileID: 2100000, guid: bb479dff2fce12d45b3a954f005e8158, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
