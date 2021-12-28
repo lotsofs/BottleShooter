@@ -5,13 +5,20 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
 	public BulletTrail trailObject;
+	AudioSource audio;
+
+	private void Start() {
+		audio = GetComponent<AudioSource>();
+	}
 
 	// Update is called once per frame
 	void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.Mouse0)) {
+			audio.Play();
+
 			RaycastHit hit;
-			Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 1000);
+			Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 10000);
 			if (hit.transform != null) {
 				IBreakable breakable = hit.transform.GetComponent<IBreakable>();
 				if (breakable != null) {
