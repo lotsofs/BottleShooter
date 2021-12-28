@@ -5,6 +5,6 @@ using UnityEngine;
 public class Prop : MonoBehaviour, IBreakable
 {
 	public void Break() {
-		this.transform.localScale *= 0.9f;
+		Destroy(this.gameObject);
 	}
 }

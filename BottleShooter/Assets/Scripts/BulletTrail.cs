@@ -16,7 +16,6 @@ public class BulletTrail : MonoBehaviour
 	}
 
 	public void SetTrail(Vector3 startPos, Vector3 endPos) {
-		Debug.Log(lineRenderer);
 		lineRenderer.SetPosition(0, startPos);
 		lineRenderer.SetPosition(1, endPos);
 	}
