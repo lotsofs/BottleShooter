@@ -18,8 +18,11 @@ public class Shoot : MonoBehaviour
 					breakable.Break();
 				}
 				GameObject trail = (GameObject)Instantiate(trailObject.gameObject, transform.position, transform.rotation);
-				Debug.Log(trail);
 				trail.GetComponent<BulletTrail>().SetTrail(this.transform.position - (new Vector3(0f, 0.1f, 0f)), hit.point);
+			}
+			else {
+				GameObject trail = (GameObject)Instantiate(trailObject.gameObject, transform.position, transform.rotation);
+				trail.GetComponent<BulletTrail>().SetTrail(this.transform.position - (new Vector3(0f, 0.1f, 0f)), transform.TransformDirection(Vector3.forward) * 100f);
 			}
 		}
 	}
