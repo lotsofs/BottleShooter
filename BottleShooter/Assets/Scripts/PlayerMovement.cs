@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-	public float xSensitivity = 1000f;
-	public float ySensitivity = 1000f;
+	public float xSensitivity = 1f;
+	public float ySensitivity = 1f;
 	public bool xFlip = false;
 	public bool yFlip = false;
 
@@ -22,8 +22,8 @@ public class PlayerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		float horizontal = Input.GetAxis("Mouse X") * Time.deltaTime * xSensitivity * (xFlip ? 1 : -1);
-		float vertical = Input.GetAxis("Mouse Y") * Time.deltaTime * ySensitivity * (yFlip ? 1 : -1);
+		float horizontal = Input.GetAxis("Mouse X") * xSensitivity * (xFlip ? 1 : -1);
+		float vertical = Input.GetAxis("Mouse Y") * ySensitivity * (yFlip ? 1 : -1);
 
 		yaw += horizontal;
 		pitch += vertical;
