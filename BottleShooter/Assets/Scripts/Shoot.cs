@@ -10,6 +10,8 @@ public class Shoot : MonoBehaviour
 	AudioSource soundFile;
 	float rayDistance = 1000f;
 
+	public delegate void OnShot();
+	public event OnShot ShotEvent;
 
 	private void Start() {
 		soundFile = GetComponent<AudioSource>();
@@ -20,6 +22,7 @@ public class Shoot : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Mouse0)) {
 			soundFile.Play();
+			ShotEvent?.Invoke();
 
 			RaycastHit hit;
 			Ray ray = new Ray {

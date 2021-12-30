@@ -16,7 +16,9 @@ public class PlayerMovement : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		
+		// We need to set these so that we don't spawn with default orientation.
+		pitch = transform.eulerAngles.x;
+		yaw = -transform.eulerAngles.y;
 	}
 
 	// Update is called once per frame
